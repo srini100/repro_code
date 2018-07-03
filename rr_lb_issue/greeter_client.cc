@@ -85,8 +85,8 @@ void *t_main(void *vargp) {
   // (use of InsecureChannelCredentials()).
     grpc::ChannelArguments args;
     args.SetLoadBalancingPolicyName("round_robin");
-    //GreeterClient greeter(grpc::CreateCustomChannel( "localhost:50051", grpc::InsecureChannelCredentials() ,args));
-    GreeterClient greeter(grpc::CreateChannel("localhost:50051", grpc::InsecureChannelCredentials()));
+    GreeterClient greeter(grpc::CreateCustomChannel( "localhost:50051", grpc::InsecureChannelCredentials() ,args));
+    //GreeterClient greeter(grpc::CreateChannel("localhost:50051", grpc::InsecureChannelCredentials()));
     std::string user("world");
     std::string reply = greeter.SayHello(user);
     std::cout << "Greeter received: " << reply << std::endl;
