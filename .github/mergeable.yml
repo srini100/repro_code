@@ -1,0 +1,9 @@
+##############################
+# example Advanced Settings
+##############################
+mergeable:
+  pull_requests:
+     label:
+       must_include:
+          regex: `test|final`
+          message: `Title must have prefixes for the following: (feat), (doc), (fix)`
