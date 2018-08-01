@@ -1,0 +1,14 @@
+mergeable:
+  pull_requests:
+    label: 
+      or: 
+        - and: 
+          - must_include:
+              regex: 'release note: yes'
+              message: 'Please include release note: yes'
+          - must_include: 
+              regex: 'lang\\/core|lang\\/c\\+\\+|lang\\/c#'
+              message: 'Please include a language label'
+        - must_include: 
+            regex: 'release note: no'
+            message: 'Please include release note: no'
