@@ -7,7 +7,7 @@ mergeable:
               regex: 'release note: yes'
               message: 'Please include release note: yes'
           - must_include: 
-              regex: 'lang\\/core|lang\\/c\\+\\+|lang\\/c#'
+              regex: '^lang\/'
               message: 'Please include a language label'
         - must_include: 
             regex: 'release note: no'
